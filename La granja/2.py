@@ -50,7 +50,7 @@ def main():
     A = detectar_errores()
     G = numero_gallinas(A)
 
-    total_huevos = huevos_producidos(G)
-    print("El total de huevos producidos en un mes es %d." %total_huevos)
+    huevos:float = huevos_producidos(G)
+    print("El total de huevos producidos en un mes es %d." %huevos)
 
 main()

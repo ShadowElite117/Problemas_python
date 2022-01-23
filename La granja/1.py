@@ -67,8 +67,8 @@ def main():
 
     proporcion:float = razon_de_proporcionalidad(M, area_por_vaca)
 
-    leche_total = leche_producida(V, X, proporcion)
+    leche:float = leche_producida(V, X, proporcion)
 
-    print("El total de leche producida en la granja es %.2f litros." %leche_total)
+    print("El total de leche producida en la granja es %.2f litros." %leche)
 
 main()
