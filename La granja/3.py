@@ -46,6 +46,7 @@ def escorpiones_en_venta(P, M, G):
     # Se hace necesario en cada caso, calcular la diferencia entre la suma de los grupos de escor-
     # piones necesarios para cumplir la demanda y los escorpiones disponibles para la venta, de
     # tal modo que se puede calcular con precisión la máxima cantidad de kilos de escorpiones.
+    # Por cierto, esos chinos están enfermos, comen lo que sea.
     if escorpiones_disponibles <= G:
         diferencia = G - escorpiones_disponibles
         G -= diferencia
