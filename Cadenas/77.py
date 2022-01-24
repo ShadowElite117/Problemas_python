@@ -1,5 +1,4 @@
 import os
-from platform import python_branch
 
 def borrar_pantalla():
     if os.name == "posix":
