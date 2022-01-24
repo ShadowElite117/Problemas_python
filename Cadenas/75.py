@@ -18,7 +18,7 @@ def invertir_cadena(cadena):
 def main():
     borrar_pantalla()
 
-    cadena = input("Introduzca la cadena de texto que desea invertir: ")
+    cadena = input("Introduzca la cadena de texto que desea comprobar si es palíndrome: ")
     cadena_invertida = invertir_cadena(cadena)
 
     if cadena == cadena_invertida:
