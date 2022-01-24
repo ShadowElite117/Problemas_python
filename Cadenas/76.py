@@ -34,6 +34,8 @@ def invertir_cadena(cadena):
     return cadena_invertida
 
 def main():
+    borrar_pantalla()
+
     cadena = input("Introduzca la cadena de texto que desea comprobar si es frase palíndrome: ")
 
     lista_cadena = cadena_a_lista(cadena)
