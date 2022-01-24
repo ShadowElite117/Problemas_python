@@ -20,6 +20,6 @@ def main():
 
     cadena = input("Introduzca la cadena de texto que desea invertir: ")
 
-    print(invertir_cadena(cadena))
+    print("La cadena invertida es: " + invertir_cadena(cadena))
 
 main()
