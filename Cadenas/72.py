@@ -6,15 +6,6 @@ def borrar_pantalla():
     elif os.name == "ce" or os.name == "nt" or os.name == "dos":
         return os.system ("cls")
 
-def contar_caracter(caracter, cadena):
-    contador = 0
-
-    for i in cadena:
-        if i == caracter:
-            contador += 1
-
-    return contador
-
 def comparar_subcadena_con_cadena(cadena, subcadena, longitud_cadena, longitud_subcadena):
     contenida = 'La cadena "' + subcadena + '" es subcadena de la cadena "' + cadena + '".'
     no_contenida = 'La cadena "' + subcadena + '" no es subcadena de la cadena "' + cadena + '".'
