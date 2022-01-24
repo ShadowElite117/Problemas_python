@@ -7,43 +7,16 @@ def borrar_pantalla():
         return os.system ("cls")
 
 def completar_diccionario(diccionario, correspondencias):
-    j = 0
+    abecedario = "abcdefghijklmnopqrstuvwxyz"
 
-    for i in diccionario:
-        diccionario[i] = correspondencias[j]
-
-        j += 1
+    for i in range(26):
+        diccionario[abecedario[i]] = correspondencias[i]
 
     return diccionario
 
 def codificar_cadena(cadena, correspondencias):
     cadena_codificada = ""
-    diccionario =   {   "a":" ",
-                        "b":" ",
-                        "c":" ",
-                        "d":" ",
-                        "e":" ",
-                        "f":" ",
-                        "g":" ",
-                        "h":" ",
-                        "i":" ",
-                        "j":" ",
-                        "k":" ",
-                        "l":" ",
-                        "m":" ",
-                        "n":" ",
-                        "o":" ",
-                        "p":" ",
-                        "q":" ",
-                        "r":" ",
-                        "s":" ",
-                        "t":" ",
-                        "u":" ",
-                        "v":" ",
-                        "w":" ",
-                        "x":" ",
-                        "y":" ",
-                        "z":" "   }
+    diccionario = {}
 
     diccionario = completar_diccionario(diccionario, correspondencias)
 
