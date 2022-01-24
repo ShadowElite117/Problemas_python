@@ -9,14 +9,6 @@ def borrar_pantalla():
 def cadena_a_lista(cadena):
     return list(cadena)
 
-def lista_a_cadena(lista):
-    if lista:
-        cadena = " ".join(lista)
-    else:
-        cadena = ""
-
-    return cadena
-
 def comparar_cadenas(cadena_1, cadena_2):
     incluida = 'La cadena "' + cadena_2 + '" está incluida la cadena "' + cadena_1 + '".'
     no_incluida = 'La cadena "' + cadena_2 + '" no está incluida la cadena "' + cadena_1 + '".'
