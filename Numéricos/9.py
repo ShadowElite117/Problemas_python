@@ -1,5 +1,9 @@
 import os
 
+# Se importa la librería math debido a que la función módulo de Python tiene un comportamiento diferente
+# con los números negativos y decimales, la función módulo de la librería math es mejor para este caso.
+import math
+
 def borrar_pantalla():
     if os.name == "posix":
         return os.system ("clear")
@@ -33,7 +37,7 @@ def detectar_errores(n):
 def comprobar_multiplo(sumando_1, sumando_2, multiplo):
     suma = sumando_1 + sumando_2
 
-    if multiplo % suma == 0:
+    if math.fmod(multiplo, suma) == 0:
         resultado = "El número " + str(multiplo) + " es múltiplo de la suma entre los números " + str(sumando_1) + " y " + str(sumando_2) + "."
     else:
         resultado = "El número " + str(multiplo) + " no es múltiplo de la suma entre los números " + str(sumando_1) + " y " + str(sumando_2) + "."
