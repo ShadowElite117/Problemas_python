@@ -1,5 +1,11 @@
 import os
 
+class Error(Exception):
+    pass
+
+class CoeficienteCero(Error):
+    pass
+
 def borrar_pantalla():
     if os.name == "posix":
         return os.system ("clear")
@@ -20,13 +26,24 @@ def detectar_errores(n):
 
             var = int(var)
 
+            if n == 1 and var == 0:
+                raise CoeficienteCero
+
         except ValueError:
             try:
                 var = float(var)
-                break
+
+                if n == 1 and var == 0:
+                    raise CoeficienteCero
+                else:
+                    break
             except ValueError:
                 borrar_pantalla()
                 print("Por favor introduzca un número racional.")
+            except CoeficienteCero:
+                print("El coeficiente A del término x^2 no puede ser cero, ya que el polinomio debe ser de grado 2.")
+        except CoeficienteCero:
+            print("El coeficiente A del término x^2 no puede ser cero, ya que el polinomio debe ser de grado 2.")
         else:
             break
 
