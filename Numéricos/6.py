@@ -21,22 +21,22 @@ def detectar_errores(n):
         try:
             if n == 1:
                 var = input("Introduzca el número: ")
-                var = int(var)
             elif n == 2:
                 var = input("Introduzca el número que desea probar como divisor del primero: ")
-                var = int(var)
 
-                if var == 0:
-                    raise DivisionPorCero
+            var = int(var)
+
+            if n == 2 and var == 0:
+                raise DivisionPorCero
 
         except ValueError:
             try:
                 var = float(var)
 
-                if var == 0:
+                if n == 2 and var == 0:
                     raise DivisionPorCero
-
-                break
+                else:
+                    break
             except ValueError:
                 print("Por favor introduzca un número racional.")
             except DivisionPorCero:
